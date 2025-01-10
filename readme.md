@@ -1,6 +1,6 @@
-# sipload
+# Slurp
 
-![SIPLoad Diagram](sipload.png)
+![Slurp Diagram](Slurp.png)
 
 A token-bucket-based SIP load-testing tool written in Go.  
 This project provides a CLI for generating SIP-like traffic at a controlled rate and concurrency level, optionally simulating SIP calls and registration sequences.
@@ -60,8 +60,8 @@ This project provides a CLI for generating SIP-like traffic at a controlled rate
 
 1. **Clone the repository** (or download the source code):
    ```bash
-   git clone https://github.com/yourusername/sipload.git
-   cd sipload
+   git clone https://github.com/yourusername/Slurp.git
+   cd Slurp
    ```
 
 2. **Install dependencies**:
@@ -71,9 +71,9 @@ This project provides a CLI for generating SIP-like traffic at a controlled rate
 
 3. **Build the binary**:
    ```bash
-   go build -o sipload .
+   go build -o Slurp .
    ```
-   This produces an executable named **`sipload`**.
+   This produces an executable named **`Slurp`**.
 
 ---
 
@@ -92,10 +92,10 @@ This project provides a CLI for generating SIP-like traffic at a controlled rate
   register_first: false
   ```
 - **Environment Variables**:  
-  You can override settings by using environment variables with the prefix `SIPLOAD_`. For example:
+  You can override settings by using environment variables with the prefix `Slurp_`. For example:
   ```bash
-  export SIPLOAD_TARGET_URI="sip:echo@other.testserver.com"
-  export SIPLOAD_CALLS_PER_SECOND=20
+  export Slurp_TARGET_URI="sip:echo@other.testserver.com"
+  export Slurp_CALLS_PER_SECOND=20
   ```
 - **CLI Flags**:  
   Values from the config file can be overridden by flags like `--target`, `--calls-per-second`, etc.
@@ -107,7 +107,7 @@ This project provides a CLI for generating SIP-like traffic at a controlled rate
 After building, you can run the CLI via:
 
 ```bash
-./sipload [command] [flags...]
+./Slurp [command] [flags...]
 ```
 
 ---
@@ -117,7 +117,7 @@ After building, you can run the CLI via:
 ### Test Command
 
 ```bash
-./sipload test [flags...]
+./Slurp test [flags...]
 ```
 
 - **Description**: Run a SIP load test with token-bucket rate limiting and optional registration.  
@@ -132,10 +132,10 @@ After building, you can run the CLI via:
 ### Version Command
 
 ```bash
-./sipload version
+./Slurp version
 ```
 
-- **Description**: Shows the current version of **sipload**.
+- **Description**: Shows the current version of **Slurp**.
 
 ---
 
@@ -143,11 +143,11 @@ After building, you can run the CLI via:
 
 1. **Use defaults from config.yaml**:
    ```bash
-   ./sipload test
+   ./Slurp test
    ```
 2. **Override with flags**:
    ```bash
-   ./sipload test \
+   ./Slurp test \
      --target "sip:echo@otherserver.com" \
      --calls-per-second 10 \
      --concurrency 5 \
@@ -156,7 +156,7 @@ After building, you can run the CLI via:
    ```
 3. **Check version**:
    ```bash
-   ./sipload version
+   ./Slurp version
    ```
 
 ---
