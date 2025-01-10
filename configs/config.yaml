@@ -1,0 +1,21 @@
+# configs/config.yaml
+
+# Default configuration for sipload
+
+# The SIP target URI to test against
+target_uri: "sip:echo@sip.testserver.com"
+
+# Default calls per second
+calls_per_second: 5
+
+# Default concurrency
+concurrency: 2
+
+# Default test duration (in seconds); 0 means run until Ctrl+C
+duration: 10
+
+# SIP Contact (from/to)
+local_contact: "sip:mytestclient@127.0.0.1:5060"
+
+# If true, send REGISTER before placing calls
+register_first: false
