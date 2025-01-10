@@ -1,6 +1,6 @@
 # Slurp
 
-![Slurp Diagram](Slurp.png)
+![Slurp Diagram](sipload.png)
 
 A token-bucket-based SIP load-testing tool written in Go.  
 This project provides a CLI for generating SIP-like traffic at a controlled rate and concurrency level, optionally simulating SIP calls and registration sequences.
